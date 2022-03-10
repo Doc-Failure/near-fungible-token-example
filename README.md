@@ -36,8 +36,3 @@ Configure your near-cli to authorize your test account recently created:
 (In the scripts folder you can find some files with a lot of usefull command.)
    
 5. Open your Near wallet and interact with your new Token.
-   
-
-```
-
-```
