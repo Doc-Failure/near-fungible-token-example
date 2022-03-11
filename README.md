@@ -1,36 +1,35 @@
 # `Near Fungible Token Example`
 
 # 📄 Introduction
+In this repository we will show how to use OpenBlimp to create a Fungible Token for the Near Protocol.
 
 # 📦 Installation
 
 To run this project locally you need to follow the next steps:
 
-## Step 1: Prerequisites
+## Prerequisites
 
 1. Create a near testnet account (https://wallet.testnet.near.org/create)
 2. Make sure you've installed Node.js ≥ 12
 3. Install the NEAR CLI globally: [near-cli] is a command line interface (CLI) for interacting with the NEAR blockchain
 4. Install dependencies: `yarn install`
 
-## Step 2: Configure your NEAR CLI
+## Configure your NEAR CLI
 
 Configure your near-cli to authorize your test account recently created:
 
     near login
 
-## Step 3: Build and make a smart contract development deploy
+## Build and deploy a Fungible Token
 
-Build the smart contract code and deploy the local development server: `yarn build:release` (see `package.json` for a full list of `scripts` you can run with `yarn`). This script return to you a provisional smart contract deployed (save it to use later). You can also follow the instructions on the folder _scripts_.
-
-# 📑 Exploring the smart contract methods
-
-The following commands allow you to interact with the smart contract methods using the NEAR CLI (for this you need to have a provisional smart contract deployed).
-
-```
-
-```
-
-1. yarn build:rel
-2. near deploy --wasmFile ./build/release/main.wasm --accountId 2.b) optional 4 update -> dev-1646132742949-24755372237025
-3. near call dev-1646132742949-24755372237025 ft_metadata --account-id doc_failure.testnet
+1. Build the smart contract:
+       `yarn build:release`
+2. Deploy the local smart contract 
+       ` near dev-deploy --wasmFile ./build/release/main.wasm --accountId  <Your Near Test Account Id>`
+3. (Optional) In the `src/main/assembly/index.ts` file you can modify the function the function `ft_initialize` to replace the stub parameter with you own parameters.
+      
+4. Use near-cli to init your fungible Token     
+       ` near call  <Your Contract Account> ft_init --account-id <Your Near Test Account Id>`
+(In the scripts folder you can find some files with a lot of usefull command.)
+   
+5. Open your Near wallet and interact with your new Token.
