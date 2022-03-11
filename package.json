@@ -13,6 +13,7 @@
   "devDependencies": {},
   "dependencies": {
     "near-sdk-as": "^3.2.3",
+    "openblimp": "0.1.15",
     "source-map-support": "^0.5.21"
   }
 }
