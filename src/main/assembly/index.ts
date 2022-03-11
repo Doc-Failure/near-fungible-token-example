@@ -13,14 +13,6 @@ export function ft_transfer_call(receiver_id: string, amount: string, msg: strin
     ft_transfer_call_impl(receiver_id, u128.from(amount), msg, "a");
 }
 
-export function ft_on_transfer(sender_id: string, amount: string, msg: string): string {
-    return "100"
-}
-
-export function ft_resolve_transfer(sender_id: string, receiver_id: string, amount: string): string {
-    return "100"
-}
-
 export function ft_total_supply(): string {
     return ft_total_supply_impl().toString();
 }
