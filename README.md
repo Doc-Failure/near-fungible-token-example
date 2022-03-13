@@ -1,5 +1,9 @@
 # `Near Fungible Token Example`
 
+
+In this Medium Articles, we'll show how to clone, build and deploy this repo: https://medium.com/@stefano.convertino/how-to-create-and-deploy-a-fungible-token-on-near-network-b9cd8aec721
+
+
 # 📄 Introduction
 In this repository we will show how to use OpenBlimp to create a Fungible Token for the Near Protocol.
 
